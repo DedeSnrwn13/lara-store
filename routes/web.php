@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\{Route, Auth};
 
-use function Clue\StreamFilter\fun;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +25,7 @@ Route::get('/success', 'CartController@success')->name('success');
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register.success');
 
 // ->middleware(['auth', 'admin:ADMIN'])
-Route::prefix('admin')->namespace('Admin')->middleware(['auth', 'admin'])->group(function() {
+Route::prefix('admin')->namespace('Admin')->middleware(['auth', 'admin:ADMIN'])->group(function() {
     Route::get('/', 'DashboardController@index')->name('admin-dashboard');
     // Kategori
     Route::resource('category', 'CategoryController');
@@ -37,6 +35,8 @@ Route::prefix('admin')->namespace('Admin')->middleware(['auth', 'admin'])->group
     Route::resource('product', 'ProductController');
     // Product
     Route::resource('product-gallery', 'ProductGalleryController');
+    // Transaction
+    Route::resource('transaction', 'TransactionController');
 });
 
 Route::group(['middleware' => ['auth']], function() {
