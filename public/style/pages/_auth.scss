@@ -1,0 +1,28 @@
+.page-auth {
+    .row-login {
+        min-height: 70vh;
+    }
+    .section-store-auth {
+        h2 {
+            font-weight: 200;
+            font-family: Poppins;
+            font-size: 28px;
+            line-height: 42px;
+            color: #0C0D36;
+        }
+        .form-control {
+            background: #F3F3F3;
+            border-radius: 8px;
+
+            label {
+                font-family: Poppins;
+                font-size: 16px;
+                color: #0C0D36;
+            }
+        }
+        .btn-register {
+            @include button-variant(#F3F3F3, transparent);
+            color: #BBBBBB;
+        }
+    }
+}
