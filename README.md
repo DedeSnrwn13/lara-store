@@ -1,3 +1,5 @@
+Instalasi Website
+
 1. Code -> Download ZIP atau Clone
 2. Simpan di C:/xampp/htdocs untuk yang memakai xampp 
 3. Lalu ekstrak
